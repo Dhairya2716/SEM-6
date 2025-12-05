@@ -1,0 +1,74 @@
+(base) student@student-HP-280-Pro-G6-Microtower-PC:~/Desktop/Dhairya-650$ who
+student  tty7         2025-12-05 12:16 (:0)
+(base) student@student-HP-280-Pro-G6-Microtower-PC:~/Desktop/Dhairya-650$ who -b
+         system boot  2025-12-05 12:16
+(base) student@student-HP-280-Pro-G6-Microtower-PC:~/Desktop/Dhairya-650$ who -q
+student
+# users=1
+(base) student@student-HP-280-Pro-G6-Microtower-PC:~/Desktop/Dhairya-650$ whoami
+student
+(base) student@student-HP-280-Pro-G6-Microtower-PC:~/Desktop/Dhairya-650$ uname
+Linux
+(base) student@student-HP-280-Pro-G6-Microtower-PC:~/Desktop/Dhairya-650$ uname -s
+Linux
+(base) student@student-HP-280-Pro-G6-Microtower-PC:~/Desktop/Dhairya-650$ uname -n
+student-HP-280-Pro-G6-Microtower-PC
+(base) student@student-HP-280-Pro-G6-Microtower-PC:~/Desktop/Dhairya-650$ uname -v
+#102-Ubuntu SMP Fri Nov 5 16:31:28 UTC 2021
+(base) student@student-HP-280-Pro-G6-Microtower-PC:~/Desktop/Dhairya-650$ user
+
+Command 'user' not found, did you mean:
+
+  command 'users' from deb coreutils (8.30-3ubuntu2)
+  command 'fuser' from deb psmisc (23.3-1)
+  command 'iuser' from deb ipmiutil (3.1.5-1)
+  command 'userv' from deb userv (1.2.0)
+
+Try: sudo apt install <deb name>
+
+(base) student@student-HP-280-Pro-G6-Microtower-PC:~/Desktop/Dhairya-650$ cp 
+cp: missing file operand
+Try 'cp --help' for more information.
+(base) student@student-HP-280-Pro-G6-Microtower-PC:~/Desktop/Dhairya-650$ cat > file.txt
+hello
+demo
+linux
+^C
+(base) student@student-HP-280-Pro-G6-Microtower-PC:~/Desktop/Dhairya-650$ cp file1.txt file2.txt
+cp: cannot stat 'file1.txt': No such file or directory
+(base) student@student-HP-280-Pro-G6-Microtower-PC:~/Desktop/Dhairya-650$ cp file.txt file1.txt
+(base) student@student-HP-280-Pro-G6-Microtower-PC:~/Desktop/Dhairya-650$ cat file1.txt
+hello
+demo
+linux
+(base) student@student-HP-280-Pro-G6-Microtower-PC:~/Desktop/Dhairya-650$ cp -s file.txt file2.txt
+(base) student@student-HP-280-Pro-G6-Microtower-PC:~/Desktop/Dhairya-650$ ls -l
+total 8712
+drwxrwxr-x 2 student student    4096 Dec  5 12:54 demo
+-rw-rw-r-- 1 student student      17 Dec  5 13:10 file1.txt
+lrwxrwxrwx 1 student student       8 Dec  5 13:17 file2.txt -> file.txt
+-rw-rw-r-- 1 student student      17 Dec  5 13:10 file.txt
+-rw-rw-r-- 1 student student  275939 Nov 26 12:49 OS_LAB_MANUAL_2025-26.pdf
+-rw-rw-r-- 1 student student 8627145 Nov 26 12:49 UnixCommand_ShellScript.pptx
+(base) student@student-HP-280-Pro-G6-Microtower-PC:~/Desktop/Dhairya-650$ ls
+commands  demo  file1.txt  file2.txt  file.txt  OS_LAB_MANUAL_2025-26.pdf  UnixCommand_ShellScript.pptx
+(base) student@student-HP-280-Pro-G6-Microtower-PC:~/Desktop/Dhairya-650$ mkdir backup
+(base) student@student-HP-280-Pro-G6-Microtower-PC:~/Desktop/Dhairya-650$ mkdir diet
+(base) student@student-HP-280-Pro-G6-Microtower-PC:~/Desktop/Dhairya-650$ ls
+backup  commands  demo  diet  file1.txt  file2.txt  file.txt  OS_LAB_MANUAL_2025-26.pdf  UnixCommand_ShellScript.pptx
+(base) student@student-HP-280-Pro-G6-Microtower-PC:~/Desktop/Dhairya-650$ cp file1.txt backup/
+(base) student@student-HP-280-Pro-G6-Microtower-PC:~/Desktop/Dhairya-650$ mv file1.txt diet/
+(base) student@student-HP-280-Pro-G6-Microtower-PC:~/Desktop/Dhairya-650$ ls
+backup  commands  demo  diet  file2.txt  file.txt  OS_LAB_MANUAL_2025-26.pdf  UnixCommand_ShellScript.pptx
+(base) student@student-HP-280-Pro-G6-Microtower-PC:~/Desktop/Dhairya-650$ ls
+backup  commands  demo  diet  file2.txt  file.txt  OS_LAB_MANUAL_2025-26.pdf  UnixCommand_ShellScript.pptx
+(base) student@student-HP-280-Pro-G6-Microtower-PC:~/Desktop/Dhairya-650$ echo "Dhairya " >> dhairya.txt
+(base) student@student-HP-280-Pro-G6-Microtower-PC:~/Desktop/Dhairya-650$ echo "dudkiya" >> dudkiya.txt
+(base) student@student-HP-280-Pro-G6-Microtower-PC:~/Desktop/Dhairya-650$ cut -d" " -f1 dhairya.txt | paste - dudkiya.txt > result.txt
+(base) student@student-HP-280-Pro-G6-Microtower-PC:~/Desktop/Dhairya-650$ ls
+backup  commands  demo  dhairya.txt  diet  dudkiya.txt  file2.txt  file.txt  OS_LAB_MANUAL_2025-26.pdf  result.txt  UnixCommand_ShellScript.pptx
+(base) student@student-HP-280-Pro-G6-Microtower-PC:~/Desktop/Dhairya-650$ cat result.txt 
+Dhairya	dudkiya
+(base) student@student-HP-280-Pro-G6-Microtower-PC:~/Desktop/Dhairya-650$ 
+
+

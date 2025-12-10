@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <style>
+        body {
+            background-color: lightblue;
+            font-family: Arial, sans-serif;
+            color: darkblue;
+            margin: 20px;
+        }
+
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+    </style>
+
+    <h1>Welcome to My Styled Page</h1>
+    <div id="box"></div>
+    <br>
+    <button onclick="changeProperty()">change property</button>
+    <button onclick="reset()">Reset</button>
+    <button onclick="change()">Click me</button>
+
+    <script>
+        function changeProperty() {
+            document.body.style.backgroundColor = "lightgreen";
+            document.body.style.color = "darkred";
+            document.body.style.fontFamily = "Courier New, monospace";
+        }
+
+        function reset() {
+            document.body.style.backgroundColor = "lightblue";
+            document.body.style.color = "darkblue";
+            box.style.backgroundColor = "red";
+            box.style.width = "100px";
+            box.style.height = "100px";
+            document.body.style.fontFamily = "Arial, sans-serif";
+        }
+
+
+        let c = true;
+
+        function change(){
+            if(c){
+                document.body.style.backgroundColor = "yellow";
+                box.style.backgroundColor = "green";
+                box.style.width = "200px";
+                box.style.height = "200px";
+                c = false;
+            } else {
+                document.body.style.backgroundColor = "lightblue";
+                box.style.backgroundColor = "red";
+                box.style.width = "100px";
+                box.style.height = "100px";
+                c = true;
+            }
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="checkbox" id="cb1" value="101" name="rollno">101
+        <input type="checkbox" id="cb2" value="102" name="rollno">102
+        <input type="checkbox" id="cb3" value="103" name="rollno">103
+        <input type="checkbox" id="cb4" value="104" name="rollno">104
+        <input type="checkbox" id="cb5" value="105" name="rollno">105
+    </div>
+
+    <h3>Selected Rollno</h3>
+    <p id="output"></p>
+
+    <script>
+
+        let arr = []
+
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+        checkboxes.forEach(checkbox => 
+        {
+            checkbox.addEventListener('change', function() 
+            {
+                if (this.checked) 
+                {
+                    arr.push(this.value)
+                } 
+                else 
+                {
+                    const index = arr.indexOf(this.value)
+                    if(index >= -1)
+                    {
+                        arr.splice(index, 1)
+                    }
+                }
+                console.log(arr);
+                //document.write(arr.join(", ") + "<br>");
+                document.getElementById("output").innerText = arr.join(", ");
+            });
+        });
+    </script>
+</body>
+</html>

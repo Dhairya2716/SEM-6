@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <script src="./bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Enter data to add.." id="add">
+    <button type="submit" onclick="addData()" class="btn btn-secondary">add</button>
+
+    <br>
+    <br>
+
+    <input type="text" placeholder="Enter index to add" id="idxAdd">
+    <!-- <button onclick="idxAddData()">add</button> -->
+
+    <input type="text" placeholder="Update data" id="update">
+    <button type="submit" onclick="updateData()" class="btn btn-primary">Update</button>
+
+    <script>
+
+        let arr = [];
+
+        function addData() {
+            let data = document.getElementById('add').value;
+
+            if(data === ''){
+                alert('Please enter some data');
+                return;
+            }
+
+            arr.push(data);
+            console.log(arr);
+            
+        }
+
+        function updateData() {
+            let idx = document.getElementById('idxAdd').value;
+            let newData = document.getElementById('update').value;
+
+            if(idx === ''){
+                alert('Please enter index to update');
+                return;
+            }
+            else if(newData === ''){
+                alert('Please enter new data to update');
+                return;
+            }
+            else if(idx === '' || newData === ''){
+                alert('Please enter index and new data to update');
+                return;
+            }
+
+            arr[idx] = newData;
+            console.log(arr);
+        }
+
+    </script>
+</body>
+</html>
